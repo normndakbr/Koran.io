@@ -68,6 +68,7 @@ class userController {
             }
         } catch (error) {
             console.log("Login Error!", + error)
+            next(error)
         }
     }
 }
