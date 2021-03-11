@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": 12345,
-    "database": "koran.io-sql",
+    "password": "12345",
+    "database": "koran-io",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

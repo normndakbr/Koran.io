@@ -45,15 +45,19 @@ class userController {
                 password: request.body.password
             }
 
+            console.log(payload);
+
             const data = await User.findOne({
                 where: {
                     email: payload.email
                 }
             })
 
+            console.log(data);
+
             if (!data) {
                 throw ({ name: 'UserNotFound' })
-            } else if (!comparePassword(payload.password, data.password)) {
+            }else if (!comparePassword(payload.password, data.password)) {
                 throw ({ name: 'InvalidEmailPassword' })
             } else {
                 const access_token = loginToken({
