@@ -15,7 +15,8 @@ class articleController {
         const newData = {
             title: request.body.title,
             body: request.body.body,
-            publish_date: new Date()
+            publish_date: new Date(),
+            page_view: 0
         }
         try {
             const newArticle = await Article.create(newData)
@@ -24,6 +25,7 @@ class articleController {
                 title: newArticle.title,
                 body: newArticle.body,
                 publish_date: newArticle.publish_date,
+                page_view: newArticle.page_view,
                 createdAt: newArticle.createdAt,
                 updatedAt: newArticle.updatedAt
             });
@@ -35,7 +37,7 @@ class articleController {
             const newRelation = await UserArticle.create(newRelationData)
             console.log(newRelation);
         } catch (error) {
-            console.log("Error adding new Article ", + error);
+            console.log("Error adding new Article ", error);
             next(error);
         }
     }
