@@ -1,0 +1,22 @@
+[
+    {
+        "email": "user1@gmail.com",
+        "role": "reporter",
+        "password": "12345"
+    },
+    {
+        "email": "user2@gmail.com",
+        "role": "reporter",
+        "password": "12345"
+    },
+    {
+        "email": "user3@gmail.com",
+        "role": "editor",
+        "password": "12345"
+    },
+    {
+        "email": "user4@gmail.com",
+        "role": "editor",
+        "password": "12345"
+    }
+]

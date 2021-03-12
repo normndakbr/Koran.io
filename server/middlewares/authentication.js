@@ -2,7 +2,7 @@ const { verifyToken } = require('../helpers/jsonwebtoken')
 const { User } = require('../models')
 
 async function authentication(request, response, next) {
-    const access_token = request.headers
+    const access_token = request.headers.access_token
 
     try {
         if(!access_token) {
